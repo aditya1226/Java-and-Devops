@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class CheckVowel {
+    // Function to check if a string contains a vowel
+    public static boolean hasVowel(String str) {
+        // Convert the string to lowercase to simplify comparison
+        str = str.toLowerCase();
+
+        // Check each character in the string
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                return true; // Return true as soon as a vowel is found
+            }
+        }
+        return false; // Return false if no vowels are found
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input string from the user
+      System.out.print("word: ");
+        String input = scanner.nextLine();
+
+        // Check if the string contains a vowel
+        if (hasVowel(input)) {
+          System.out.println("atleast 1 vowel.");
+        } else {
+          System.out.println("0 vowel");
+        }
+    }
+}
