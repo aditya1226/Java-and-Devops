@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class CollatzConjecture {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read input
+        long N = scanner.nextLong();
+        
+        // Generate the Collatz sequence
+        while (N > 1) {
+            System.out.print(N + " ");
+            if (N % 2 == 1) {
+                N = 3 * N + 1;
+            } else {
+                N /= 2; // N >>= 1 in C++ is equivalent to N / 2
+            }
+        }
+        
+        // Print the final 1
+        System.out.println(1);
+        
+        scanner.close();
+    }
+}
