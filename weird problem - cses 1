@@ -13,7 +13,7 @@ public class CollatzConjecture {
             if (N % 2 == 1) {
                 N = 3 * N + 1;
             } else {
-                N /= 2; // N >>= 1 in C++ is equivalent to N / 2
+                N /= 2; 
             }
         }
         
