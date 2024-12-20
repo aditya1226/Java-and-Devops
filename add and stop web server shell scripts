@@ -1,0 +1,28 @@
+#!/bin/bash
+# manage_server.sh
+
+case "$1" in
+  start)
+    echo "Starting Apache server..."
+    sudo systemctl start apache2
+    echo "Apache server started."
+    ;;
+  stop)
+    echo "Stopping Apache server..."
+    sudo systemctl stop apache2
+    echo "Apache server stopped."
+    ;;
+  restart)
+    echo "Restarting Apache server..."
+    sudo systemctl restart apache2
+    echo "Apache server restarted."
+    ;;
+  status)
+    echo "Checking Apache server status..."
+    sudo systemctl status apache2
+    ;;
+  *)
+    echo "Usage: $0 {start|stop|restart|status}"
+    exit 1
+    ;;
+esac
